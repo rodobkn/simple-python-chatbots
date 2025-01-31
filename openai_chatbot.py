@@ -2,7 +2,7 @@ import os
 import openai
 from dotenv import load_dotenv
 
-# Cargar la API Key desde el archivo .env
+# Cargar la API Key de OpenAI desde el archivo .env
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     
     while True:
         user_input = input("Tú: ")
-        if user_input.lower() == "salir":
+        if user_input == "salir":
             print("👋 Adiós!")
             break
         response, chat_history = chat_with_openai(user_input, chat_history)

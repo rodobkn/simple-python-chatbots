@@ -30,7 +30,7 @@ if __name__ == "__main__":
     
     while True:
         user_input = input("Tú: ")
-        if user_input.lower() == "salir":
+        if user_input == "salir":
             print("👋 Adiós!")
             break
         response, chat_history = chat_with_deepseek(user_input, chat_history)
